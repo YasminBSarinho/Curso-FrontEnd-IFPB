@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    --primary-color: rgb(234, 162, 252);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--primary-color);
+    height: 10vh;
+    text-align: center;
+}
+
+.header h1{
+    padding: 2.5vh;
+}
+
+.container {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container .item {
+    background-color: rgb(196, 91, 206);
+    height: 4rem;
+    font-size: 1rem;
+    border: 2px solidb #373637;
+}
+
+.rodape {
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--primary-color);
+}

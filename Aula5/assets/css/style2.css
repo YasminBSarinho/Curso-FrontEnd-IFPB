@@ -1,0 +1,38 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header, .footer{
+    background-color: rgb(170, 103, 187);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.content .box {
+    background-color: rgb(245, 210, 253);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(245, 210, 253);
+    border-radius: 10px;
+    flex: 1;
+}
+
+@media (max-width: 600px){
+    .content {
+        flex-direction: column;
+    }
+
+    .box{
+        padding: 15px;
+    }
+}
