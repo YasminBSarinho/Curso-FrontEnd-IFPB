@@ -1,0 +1,44 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(229, 179, 241, 0.384);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(226, 43, 195);
+    border-radius: 50%;
+    animation: moveColor 3s infinite ease-in-out;
+}
+
+@keyframes moveColor {
+    0%, 100%{
+        transform: translate(0, 0);
+        background-color: rgba(229, 179, 241, 0.384);
+    }
+    
+    25% {
+        transform: translate(150px, 0);
+        background-color: rgba(229, 179, 241, 0.877);
+    }
+    
+    50% {
+        transform: translate(150px, 150px);
+        background-color: rgb(211, 137, 230);
+    }
+
+    75% {
+        transform: translate(0, 150px);
+        background-color: rgba(229, 179, 241, 0.877);
+    }
+
+}

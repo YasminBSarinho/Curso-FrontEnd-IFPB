@@ -1,0 +1,54 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://img.freepik.com/free-vector/beautiful-wavy-background_23-2148465606.jpg?t=st=1737027885~exp=1737031485~hmac=69cfc57cbef74d67c2d9568813c12e60c53b0de0907c0fae066313a0188c2251&w=900") no-repeat center/cover;
+}
+
+.card {
+    background: rgba(229, 179, 241, 0.637);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: bluR(1px);
+    box-shadow: rgb(11, 8, 12);
+}
+
+.card h1, .card p {
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    width: 0;
+    animation: typing 4s steps(30) infinite alternate;
+}
+
+.card p {
+    font-size: 16px;
+    animation: blink 4s steps(20)  alternate, blink 0.75 step-end infinite;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50%{
+        border-color: #fff;
+    }
+}
