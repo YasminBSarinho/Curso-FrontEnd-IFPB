@@ -1,0 +1,278 @@
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+
+    --primary-color: rgba(216, 34, 49, 1); 
+    --background-color: rgb(250, 249, 246); 
+    --auxiliar-color-brown: rgba(89, 66, 46, 1);
+    --auxiliar-color-red:rgba(216, 4, 4, 1);
+    --auxiliar-color-burgundy: rgba(89, 7, 7, 1); 
+}
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+
+    width: 100vw;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+
+}
+
+
+.footer{
+    bottom: 0;
+}
+
+/* Barra de navegação */
+header .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .nav-bar h1{
+    font-family: 'Ballet';
+    font-size: 30px;
+    padding-left: 2rem;
+
+    color: black;
+}
+
+a{
+    text-decoration:none;
+}
+
+header .nav-bar .links-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    padding-right: 2rem;
+}
+
+header .nav-bar .links-nav-bar a{
+    padding: 0.5rem;
+    text-decoration:none;
+
+    color: black;
+    font-weight: 500;
+}
+
+/* Pagina inicial */
+#pagina-inicial{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pagina-inicial .titulo{
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.card-receita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 15rem;
+    width: 15rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: .5rem;
+
+    background-color: var(--auxiliar-color-brown);
+
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+}
+
+.card-receita h1{
+    color: var(--background-color);
+}
+
+.card-receita img{
+    height: 10rem;
+    width: 12rem;
+    border-radius: .5rem;
+    
+    /* ajusta a imagem para não ficar esticada */
+    Object-fit: cover;
+}
+
+#receita-hamburguer, #receita-bolo{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--auxiliar-color-brown);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#receita-lasanha{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#receita-hamburguer img , #receita-lasanha img, #receita-bolo img{
+    width: 30vw;
+    height: 70vh;
+    Object-fit: cover;
+    margin-left: 5rem;
+    border-radius: 2rem;
+
+}
+
+/* animacao */
+#receita-hamburguer img:hover, 
+#receita-lasanha img:hover, 
+#receita-bolo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#receita-hamburguer h1, #receita-lasanha h1, #receita-bolo h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.receitas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.receita-passo-a-passo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* animacao do titulo*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#receita-hamburguer h1, #receita-lasanha h1, #receita-bolo h1{
+    opacity: 0; 
+    animation: fadeIn 3s ease-in-out forwards; 
+}
+
+
+
+/* telefone pequeno */
+@media (max-width: 480px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #receita-hamburguer, #receita-bolo, #receita-lasanha{
+        width: 100vw;
+        height: 120vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pagina-inicial{
+        height: 150vh;
+    }
+    
+    .receitas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    #receita-hamburguer img , #receita-lasanha img, #receita-bolo img{
+        width: 70vw;
+        height: 30vh;
+        Object-fit: cover;
+        display: block;
+        /*é uma gambiarrapar ficar centralizado*/
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    
+    .receita-passo-a-passo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #receita-hamburguer h1, #receita-lasanha h1, #receita-bolo h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media (max-width: 769px){
+    .nav-bar {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header .nav-bar h1{
+        padding: 0;
+    }
+
+
+    #pagina-inicial{
+        margin-top: 10rem;
+    }
+}
+
+/* maiores que tablets*/
+@media (min-width: 1024px) {
+
+    .card-receita:hover{
+        transform: scale(1.2);
+    }
+
+}

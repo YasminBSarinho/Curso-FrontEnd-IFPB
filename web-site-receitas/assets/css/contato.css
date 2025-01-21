@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+
+    --primary-color: rgba(216, 34, 49, 1); 
+    --background-color: rgb(250, 249, 246); 
+    --auxiliar-color-brown: rgba(89, 66, 46, 1);
+    --auxiliar-color-red:rgba(216, 4, 4, 1);
+    --auxiliar-color-burgundy: rgba(89, 7, 7, 1); 
+}
+
+body {
+    background-color: var(--auxiliar-color-brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Barra de navegação */
+header {
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+
+}
+
+
+/* Barra de navegação */
+header .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header .nav-bar h1{
+    font-family: 'Ballet';
+    font-size: 30px;
+    padding-left: 2rem;
+
+    color: var(--auxiliar-color-brown);
+}
+
+a{
+    text-decoration:none;
+}
+
+header .nav-bar .links-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    padding-right: 2rem;
+}
+
+header .nav-bar .links-nav-bar a{
+    padding: 0.5rem;
+    text-decoration:none;
+
+    color: var(--auxiliar-color-brown);
+    font-weight: 500;
+}
+
+.form-receitas, form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 3rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+
+    background-color: var(--auxiliar-color-brown);
+    color: black;
+
+    border: 2px solid var(--background-color);
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
