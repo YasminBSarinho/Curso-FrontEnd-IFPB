@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(255, 235, 249);
+}
+
+header {
+    position: relative;
+    background-color: rgb(104, 36, 84);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .contador-tarefas {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: rgb(187, 133, 171);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.entrada-tarefa {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.entrada-tarefa input{
+    flex: 1;
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.entrada-tarefa button {
+    background-color: rgba(104, 36, 84, 0.514);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.entrada-tarefa button:hover {
+    background-color: rgb(104, 36, 84);
+}
+
+.tarefas li{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     margin-bottom: 0.5rem;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+     transition: background-color 0.3s, transform 0.2s;
+     cursor: pointer;
+}
+
+.tarefas li.concluida {
+    background-color: rgb(100, 100, 100);
+    transform: scale(1.02);
+    color: #333;
+}
+
+.conteudo-tarefa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.icone-terfa {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: rgb(104, 36, 84);
+    visibility: hidden;
+}
+
+.tarefas li.concluida .icone-terfa {
+    visibility: visible;
+}
+
+.tarefas button {
+    background-color: rgb(255, 0, 119);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tarefas button:hover {
+    background-color: crimson;
+}
